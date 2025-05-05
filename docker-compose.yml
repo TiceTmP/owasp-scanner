@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.backend
+    ports:
+      - "3000:3000"
+    environment:
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=postgres
+      - DB_NAME=owasp_scanner
+      - DB_SYNC=true
+      - ZAP_API_URL=http://zap:9000
+      - ZAP_API_KEY=thiskeyforzapbyticetmp
+    depends_on:
+      - postgres
+    restart: always
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - backend
+    restart: always
+
+  postgres:
+    image: postgres:14-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=owasp_scanner
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    restart: always
+
+  zap:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9000:9000"
+    environment:
+      - ZAP_API_KEY=thiskeyforzapbyticetmp
+    restart: always
+
+volumes:
+  postgres-data:

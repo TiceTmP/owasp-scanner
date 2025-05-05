@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="256" height="256" rx="32" fill="#F3F4F6"/>
+    <path d="M128 40C90.5 40 60 70.5 60 108V192C60 196.4 63.6 200 68 200H188C192.4 200 196 196.4 196 192V108C196 70.5 165.5 40 128 40Z" fill="#2563EB" fill-opacity="0.1"/>
+    <path d="M128 56C99.4 56 76 79.4 76 108V184H180V108C180 79.4 156.6 56 128 56Z" stroke="#2563EB" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M128 84C114.7 84 104 94.7 104 108V128C104 141.3 114.7 152 128 152C141.3 152 152 141.3 152 128V108C152 94.7 141.3 84 128 84Z" stroke="#2563EB" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M104 128V156C104 169.3 114.7 180 128 180C141.3 180 152 169.3 152 156V128" stroke="#2563EB" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M128 100V136" stroke="#2563EB" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M114 114L128 100L142 114" stroke="#2563EB" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

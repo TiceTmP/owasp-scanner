@@ -1,0 +1,113 @@
+{
+  "common": {
+    "appName": "OWASP API Scanner",
+    "loading": "กำลังโหลด...",
+    "cancel": "ยกเลิก",
+    "save": "บันทึก",
+    "confirm": "ยืนยัน",
+    "delete": "ลบ",
+    "edit": "แก้ไข",
+    "view": "ดู",
+    "search": "ค้นหา",
+    "filter": "กรอง",
+    "back": "กลับ",
+    "next": "ถัดไป",
+    "previous": "ก่อนหน้า",
+    "submit": "ส่ง",
+    "reset": "รีเซ็ต",
+    "refresh": "รีเฟรช",
+    "download": "ดาวน์โหลด",
+    "goBack": "กลับไป"
+  },
+  "auth": {
+    "login": "เข้าสู่ระบบ",
+    "logout": "ออกจากระบบ",
+    "username": "ชื่อผู้ใช้",
+    "password": "รหัสผ่าน",
+    "forgotPassword": "ลืมรหัสผ่าน?",
+    "signIn": "เข้าสู่ระบบ",
+    "signOut": "ออกจากระบบ",
+    "profile": "โปรไฟล์",
+    "settings": "การตั้งค่า",
+    "loginFailed": "เข้าสู่ระบบไม่สำเร็จ",
+    "invalidCredentials": "ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง",
+    "demoCredentials": "สำหรับการทดลองใช้งาน สามารถใช้: admin / password"
+  },
+  "dashboard": {
+    "title": "แดชบอร์ด",
+    "newScan": "สแกนใหม่",
+    "recentScans": "การสแกนล่าสุด",
+    "totalScans": "การสแกนทั้งหมด",
+    "completedScans": "สแกนสำเร็จ",
+    "failedScans": "สแกนล้มเหลว",
+    "vulnerabilities": "ช่องโหว่ที่ตรวจพบทั้งหมด",
+    "highRiskVulnerabilities": "ความเสี่ยงสูง",
+    "scanId": "รหัสการสแกน",
+    "status": "สถานะ",
+    "startedAt": "เริ่มต้นเมื่อ",
+    "completedAt": "เสร็จสิ้นเมื่อ",
+    "noScans": "ยังไม่มีประวัติการสแกน",
+    "startFirstScan": "เริ่มการสแกนแรก",
+    "viewDetails": "ดูรายละเอียด"
+  },
+  "scan": {
+    "newScan": "สแกนใหม่",
+    "scanResults": "ผลการสแกน",
+    "apiJsonUrl": "URL ของ Swagger JSON",
+    "baseUrl": "Base URL ของ API",
+    "minimumRiskLevel": "ระดับความเสี่ยงขั้นต่ำที่ต้องการให้รายงาน",
+    "startScan": "เริ่มสแกน",
+    "startingScan": "กำลังเริ่มสแกน...",
+    "scanStarted": "เริ่มสแกนสำเร็จ",
+    "scanFailed": "เริ่มสแกนไม่สำเร็จ",
+    "scanInfo": "ระบบจะทำการสแกนตามมาตรฐาน OWASP โดยใช้ข้อมูล API จาก Swagger JSON ที่คุณระบุ กระบวนการสแกนอาจใช้เวลาหลายนาทีขึ้นอยู่กับขนาดและความซับซ้อนของ API",
+    "scanningInProgress": "กำลังดำเนินการสแกน...",
+    "cancelScan": "ยกเลิกการสแกน",
+    "downloadReport": "ดาวน์โหลดรายงาน",
+    "refreshData": "รีเฟรชข้อมูล",
+    "summary": "สรุปผลการสแกน",
+    "vulnerabilityDetails": "รายละเอียดช่องโหว่ที่พบ",
+    "noVulnerabilitiesFound": "ไม่พบช่องโหว่ด้านความปลอดภัย",
+    "apiSecure": "API ของคุณไม่มีช่องโหว่ที่ตรวจพบตามมาตรฐาน OWASP",
+    "scanFailed": "การสแกนล้มเหลว",
+    "tryAgain": "ลองใหม่อีกครั้ง"
+  },
+  "vulnerability": {
+    "risk": "ความเสี่ยง",
+    "confidence": "ความเชื่อมั่น",
+    "url": "URL ที่พบช่องโหว่",
+    "parameter": "พารามิเตอร์",
+    "description": "คำอธิบาย",
+    "solution": "วิธีการแก้ไข",
+    "evidence": "หลักฐาน",
+    "reference": "ข้อมูลอ้างอิง",
+    "riskLevels": {
+      "critical": "Critical",
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low",
+      "informational": "Info"
+    },
+    "confidenceLevels": {
+      "high": "สูง",
+      "medium": "ปานกลาง",
+      "low": "ต่ำ"
+    }
+  },
+  "status": {
+    "PENDING": "รอดำเนินการ",
+    "IN_PROGRESS": "กำลังดำเนินการ",
+    "COMPLETED": "เสร็จสิ้น",
+    "FAILED": "ล้มเหลว"
+  },
+  "errors": {
+    "required": "กรุณากรอกข้อมูล",
+    "invalidUrl": "กรุณากรอก URL ที่ถูกต้อง",
+    "loadingFailed": "เกิดข้อผิดพลาดในการโหลดข้อมูล",
+    "scanFailed": "เกิดข้อผิดพลาดในการเริ่มต้นการสแกน",
+    "downloadFailed": "เกิดข้อผิดพลาดในการดาวน์โหลดรายงาน",
+    "cancelFailed": "เกิดข้อผิดพลาดในการยกเลิกการสแกน",
+    "noScanId": "ไม่พบรหัสการสแกน",
+    "connectionError": "เกิดข้อผิดพลาดในการเชื่อมต่อกับเซิร์ฟเวอร์"
+  }
+}

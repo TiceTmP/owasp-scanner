@@ -1,0 +1,26 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  css: ['~/assets/css/main.css'],
+  modules: [
+    // '@nuxtjs/tailwindcss'
+    // เพิ่ม @nuxtjs/tailwindcss หากใช้โมดูลนี้
+    // หากไม่ได้ใช้ก็ไม่ต้องเพิ่ม
+  ],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {}
+    }
+  },
+  compatibilityDate: '2024-11-01',
+  devtools: { enabled: true },
+  runtimeConfig: {
+    // ตัวแปรส่วนตัว (private) - เข้าถึงได้เฉพาะ server-side
+    apiSecret: process.env.API_SECRET,
+
+    // ตัวแปรสาธารณะ (public) - เข้าถึงได้ทั้ง client-side และ server-side
+    public: {
+      apiBase: process.env.API_BASE_URL || 'http://localhost:3000',
+    }
+  },
+})

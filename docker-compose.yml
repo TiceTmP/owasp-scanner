@@ -46,7 +46,7 @@ services:
   zap:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.zap
     ports:
       - "9000:9000"
     environment:

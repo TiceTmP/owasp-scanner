@@ -1,0 +1,7 @@
+node_modules
+.nuxt
+.output
+.git
+.github
+yarn-error.log
+npm-debug.log

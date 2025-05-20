@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   modules: [
+    'nuxt-icon',
     // '@nuxtjs/tailwindcss'
     // เพิ่ม @nuxtjs/tailwindcss หากใช้โมดูลนี้
     // หากไม่ได้ใช้ก็ไม่ต้องเพิ่ม

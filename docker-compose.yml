@@ -19,6 +19,7 @@ services:
       - ZAP_API_KEY=thiskeyforzapbyticetmp
     depends_on:
       - postgres
+      - example
     restart: always
 
   frontend:
@@ -29,6 +30,16 @@ services:
       - "8080:8080"
     depends_on:
       - backend
+    restart: always
+
+  example:
+    build:
+      context: ./example
+      dockerfile: Dockerfile.example
+    ports:
+      - "3030:3030"
+    environment:
+      - NODE_ENV=development
     restart: always
 
   postgres:

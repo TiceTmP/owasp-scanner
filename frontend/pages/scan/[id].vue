@@ -208,8 +208,9 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from 'vue';
-import type { ScanResponse, Vulnerability } from '~/types';
+import type { ScanResponse } from '~/types';
 import { formatDate, formatScanStatus, getScanStatusColor } from '~/utils/formatters';
+import VulnerabilityCard from "~/components/VulnerabilityCard.vue";
 
 // Define middleware
 definePageMeta({

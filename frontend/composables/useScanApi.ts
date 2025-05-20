@@ -114,6 +114,21 @@ export const useScanApi = () => {
         }
     };
 
+    const createFrontendScan = async (frontendScanRequest: any) => {
+        loading.value = true;
+        error.value = null;
+
+        try {
+            const response = await $api.post<ScanResponse>('/api-scanner/frontend', frontendScanRequest);
+            return response.data;
+        } catch (err: any) {
+            error.value = err.response?.data?.message || 'เกิดข้อผิดพลาดในการเริ่มต้นการสแกน';
+            throw error.value;
+        } finally {
+            loading.value = false;
+        }
+    };
+
     return {
         loading,
         error,
@@ -123,5 +138,6 @@ export const useScanApi = () => {
         cancelScan,
         downloadReport,
         getApiStats,
+        createFrontendScan,
     };
 };

@@ -27,3 +27,16 @@ export interface Vulnerability {
   cweid: string;
   wascid: string;
 }
+
+export interface FrontendScanOptions {
+  scanDepth?: 'quick' | 'standard' | 'detailed';
+  minimumRiskLevel?: string;
+  authentication?: {
+    loginUrl: string;
+    username: string;
+    password: string;
+    loginRequestData?: string;
+  };
+  sameHostOnly?: boolean;
+  maxDuration?: number;
+}

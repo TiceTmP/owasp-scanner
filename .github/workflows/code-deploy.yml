@@ -10,9 +10,13 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
     - name: Deploy to server with rsync
+      uses: contention/rsync-deployments@v2.0.0
       env:
         REMOTE_USER: ${{ secrets.SSH_USER }}
         REMOTE_HOST: ${{ secrets.SSH_IP }}
         REMOTE_PATH: ${{ secrets.SSH_PATH }}
-      run: |
-        rsync -avz -e "ssh -o StrictHostKeyChecking=no" ./ $REMOTE_USER@$REMOTE_HOST:$REMOTE_PATH
+      with:
+        USER: $REMOTE_USER
+        HOST: $REMOTE_HOST
+        LOCALPATH: ./
+        REMOTEPATH: $REMOTE_PATH

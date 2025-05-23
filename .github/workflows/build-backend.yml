@@ -1,6 +1,9 @@
 name: Build & run backend
 
 on:
+  push:
+    paths:
+      - 'backend/**'
   workflow_dispatch:
 
 jobs:

@@ -8,15 +8,7 @@ services:
       dockerfile: Dockerfile.backend
     ports:
       - "3000:3000"
-    environment:
-      - DB_HOST=postgres
-      - DB_PORT=5432
-      - DB_USERNAME=postgres
-      - DB_PASSWORD=postgres
-      - DB_NAME=owasp_scanner
-      - DB_SYNC=true
-      - ZAP_API_URL=http://zap:9000
-      - ZAP_API_KEY=thiskeyforzapbyticetmp
+    env_file: "backend.env"
     depends_on:
       - postgres
       - example

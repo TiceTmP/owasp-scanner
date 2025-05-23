@@ -1,4 +1,4 @@
-name: Build and run backend
+name: Build & run backend
 
 on:
   workflow_dispatch:

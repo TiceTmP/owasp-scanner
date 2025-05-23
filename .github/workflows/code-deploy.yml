@@ -15,8 +15,10 @@ jobs:
         REMOTE_USER: ${{ secrets.SSH_USER }}
         REMOTE_HOST: ${{ secrets.SSH_IP }}
         REMOTE_PATH: ${{ secrets.SSH_PATH }}
+        REMOTE_KEY:  ${{ secrets.SSH_KEY }}
       with:
         USER: $REMOTE_USER
         HOST: $REMOTE_HOST
+        KEY:  $REMOTE_KEY
         LOCALPATH: ./
         REMOTEPATH: $REMOTE_PATH

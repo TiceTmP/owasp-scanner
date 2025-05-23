@@ -1,4 +1,4 @@
-name: Build and run all container except postgres
+name: Build & run container except db
 
 on:
   workflow_dispatch:

@@ -19,6 +19,6 @@ jobs:
       with:
         USER: $REMOTE_USER
         HOST: $REMOTE_HOST
-        KEY:  $REMOTE_KEY
+        DEPLOY_KEY:  $REMOTE_KEY
         LOCALPATH: ./
         REMOTEPATH: $REMOTE_PATH

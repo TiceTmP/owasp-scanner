@@ -9,11 +9,11 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
-    - name: Deploy to server with rsync
-      uses: contention/rsync-deployments@v2.0.0
+    - name: Deploy
+      uses: burnett01/rsync-deployments@7.0.2
       with:
-        USER: ${{ secrets.SSH_USER }}
-        HOST: ${{ secrets.SSH_IP }}
-        DEPLOY_KEY:  ${{ secrets.SSH_KEY }}
-        LOCALPATH: /
-        REMOTEPATH: ${{ secrets.SSH_PATH }}
+        switches: -avzr
+        remote_path: ${{ secrets.SSH_PATH }}
+        remote_host: ${{ secrets.SSH_IP }}
+        remote_user: ${{ secrets.SSH_USER }}
+        remote_key: ${{ secrets.DEPLOY_KEY }}

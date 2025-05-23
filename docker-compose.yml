@@ -20,6 +20,7 @@ services:
       dockerfile: Dockerfile.frontend
     ports:
       - "8080:8080"
+      - "5173:5173"
     env_file: "frontend.env"
     depends_on:
       - backend

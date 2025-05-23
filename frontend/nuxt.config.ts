@@ -13,8 +13,18 @@ export default defineNuxtConfig({
       autoprefixer: {}
     }
   },
+  vite: {
+    server: {
+      hmr: {
+        protocol: 'ws',
+        host: 'localhost',
+        port: 5173,
+        clientPort: 5173
+      }
+    }
+  },
   compatibilityDate: '2024-11-01',
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   runtimeConfig: {
     // ตัวแปรส่วนตัว (private) - เข้าถึงได้เฉพาะ server-side
     apiSecret: process.env.API_SECRET,

@@ -1,4 +1,4 @@
-name: Build & run container except db
+name: Build & run container without db
 
 on:
   workflow_dispatch:

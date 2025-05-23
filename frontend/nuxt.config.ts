@@ -15,12 +15,7 @@ export default defineNuxtConfig({
   },
   vite: {
     server: {
-      hmr: {
-        protocol: 'ws',
-        host: 'localhost',
-        port: 5173,
-        clientPort: 5173
-      }
+      hmr: false
     }
   },
   compatibilityDate: '2024-11-01',

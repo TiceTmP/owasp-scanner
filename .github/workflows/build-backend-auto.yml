@@ -1,4 +1,4 @@
-name: Build & run backend
+name: Auto build & run backend
 
 on:
   push:

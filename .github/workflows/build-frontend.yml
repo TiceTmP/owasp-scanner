@@ -1,6 +1,9 @@
 name: Build & run frontend
 
 on:
+  push:
+    paths:
+      - 'frontend/**'
   workflow_dispatch:
 
 jobs:

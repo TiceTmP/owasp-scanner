@@ -1,4 +1,4 @@
-name: Build & run all container
+name: Build & run all container with db
 
 on:
   workflow_dispatch:

@@ -18,6 +18,12 @@ export default defineNuxtConfig({
       hmr: false
     }
   },
+  ssr: true,
+  nitro: {
+    experimental: {
+      wasm: true
+    }
+  },
   compatibilityDate: '2024-11-01',
   devtools: { enabled: false },
   runtimeConfig: {

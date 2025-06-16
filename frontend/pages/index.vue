@@ -121,14 +121,7 @@ onMounted(async () => {
 
     // ดึงประวัติการสแกนล่าสุด
     recentScans.value = await scanApi.getRecentScans();
-
-    // ดึงข้อมูลสถิติ
-    try {
-      stats.value = await scanApi.getApiStats();
-    } catch (err) {
-      // ถ้าไม่สามารถดึงข้อมูลสถิติได้ ให้คำนวณเอง
-      calculateStats();
-    }
+    calculateStats();
   } catch (err) {
     if (typeof err === 'string') {
       error.value = err;

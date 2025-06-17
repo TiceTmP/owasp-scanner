@@ -76,7 +76,19 @@
       </div>
 
       <div class="text-center text-sm text-gray-500">
-        สำหรับการทดลองใช้งาน สามารถใช้: admin / password
+        สำหรับการทดลองใช้งาน สามารถใช้:
+        <br>
+        admin@mail.com / password
+      </div>
+
+      <div class="text-center text-sm text-gray-500 space-y-2">
+        <button
+            type="button"
+            @click="openAdminCreationPage"
+            class="text-primary-600 hover:text-primary-800 underline"
+        >
+          สร้างผู้ดูแลระบบ (ครั้งแรก)
+        </button>
       </div>
     </form>
   </div>
@@ -90,6 +102,9 @@ definePageMeta({
   layout: 'auth',
 });
 
+const config = useRuntimeConfig();
+const apiBaseUrl = computed(() => config.public.apiBase);
+
 // State
 const username = ref('');
 const password = ref('');
@@ -101,6 +116,11 @@ const errors = reactive({
 
 // Get auth composable
 const { login, loading: authLoading, error: authError } = useAuth();
+
+const openAdminCreationPage = () => {
+  const url = `${apiBaseUrl.value}/auth/create-admin-user`;
+  window.open(url, '_blank');
+};
 
 // Form validation
 const validateForm = (): boolean => {

@@ -28,7 +28,7 @@ import { ReportsModule } from './reports/reports.module';
     }),
     ApiScannerModule,
     ReportsModule,
-    // AuthModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],

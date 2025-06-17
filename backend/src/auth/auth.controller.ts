@@ -1,4 +1,4 @@
-import { Controller, Get, Req, UseGuards } from '@nestjs/common';
+import { Body, Controller, Get, Post, Req, UseGuards } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { AuthGuard } from '@nestjs/passport';
 
@@ -34,5 +34,15 @@ export class AuthController {
   @UseGuards(AuthGuard('microsoft'))
   microsoftAuthRedirect(@Req() req: any) {
     return this.authService.microsoftLogin(req);
+  }
+
+  @Post('login')
+  async login(@Body() body: { email: string; password: string }) {
+    return await this.authService.login(body);
+  }
+
+  @Get('create-admin-user')
+  async createAdminUser() {
+    return await this.authService.createAdminUser();
   }
 }

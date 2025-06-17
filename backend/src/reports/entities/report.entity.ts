@@ -10,7 +10,7 @@ import {
   Vulnerability,
 } from '../../api-scanner/interfaces/scan-result.interface';
 
-@Entity()
+@Entity('report')
 export class Report {
   @PrimaryGeneratedColumn('uuid')
   id: string;

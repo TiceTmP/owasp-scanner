@@ -15,7 +15,9 @@ export default defineNuxtConfig({
   },
   vite: {
     server: {
-      hmr: false
+      hmr: {
+        host: 'localhost',
+      }
     }
   },
   ssr: true,

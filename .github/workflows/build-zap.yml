@@ -9,6 +9,14 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
+    - name: Deploy
+      uses: burnett01/rsync-deployments@7.0.2
+      with:
+        switches: -avzr
+        remote_path: ${{ secrets.SSH_PATH }}
+        remote_host: ${{ secrets.SSH_IP }}
+        remote_user: ${{ secrets.SSH_USER }}
+        remote_key: ${{ secrets.SSH_KEY }}
     - name: Build by compose
       uses: D3rHase/ssh-command-action@v0.3.1
       with:

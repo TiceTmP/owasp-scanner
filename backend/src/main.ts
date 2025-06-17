@@ -5,10 +5,7 @@ import * as session from 'express-session';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  app.enableCors({
-    origin: process.env.CORS_ORIGIN || 'http://localhost:8080',
-    credentials: true,
-  });
+  app.enableCors();
 
   app.use(
     session({

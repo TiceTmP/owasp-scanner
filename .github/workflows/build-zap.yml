@@ -15,4 +15,4 @@ jobs:
         host: ${{ secrets.SSH_IP }}
         user: ${{ secrets.SSH_USER }}
         private_key: ${{ secrets.SSH_KEY }}
-        command: 'cd ${{ secrets.SSH_PATH }} && docker compose up -d --build --force-recreate zap'
+        command: 'cd ${{ secrets.SSH_PATH }} && docker compose up -d --force-recreate --build zap'
